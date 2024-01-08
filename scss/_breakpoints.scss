@@ -1,0 +1,36 @@
+@mixin breakpoints($point) {
+    @if $point == mobile {
+        @media (max-width: 510px) {
+            @content;
+        }
+    } @else if $point == small {
+        @media (max-width: 600px) {
+            @content;
+        }
+    } @else if $point == medium {
+        @media (min-width: 100px) and (max-width: 837px) {
+            @content;
+        }
+    } @else if $point == large {
+        @media (max-width: 1080px) {
+            @content;
+        }
+    } @else if $point == xlarge {
+        @media (min-width: 100px) and (max-width: 1342px) {
+            @content;
+        }
+    } @else if $point == mud2 {
+        @media (min-width: 501px) and (max-width: 705px) {
+            @content;
+        }
+    } @else if $point == mobtoipad {
+        @media (min-width: 0px) and (max-width: 1000px) {
+            @content;
+        }
+    } @else if $point == small-mobile {
+        @media (max-width: 435px) {
+            @content;
+        }
+    }
+     
+}

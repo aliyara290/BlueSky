@@ -1,0 +1,22 @@
+@mixin flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flexcenter2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin links {
+    text-decoration: none;
+    font-size: 13px;
+    color: var(--light);
+    font-weight: var(--fw-sm);
+}
+
+@mixin menuColor {
+    color: var(--dark);
+}

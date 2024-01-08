@@ -1,0 +1,575 @@
+@import './functions/functions';
+@import './helpers/helpers';
+@import './mixins/mixins';
+@import './variables/variables';
+@import './breakpoints';
+
+// tailwind
+
+html {
+  user-select: none;
+}
+// styles
+.blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.2;
+  display: none;
+  z-index: 510;
+}
+// mobile nav
+
+.layer-one {
+  width: 25px;
+}
+.icon-m i {
+  font-size: 25px;
+}
+//  alert 
+.alert-content {
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 50px;
+    left: -100%; /* Start off-screen to the left */
+    transform: translateX(-50%);
+    z-index: 20;
+    padding: 10px 30px;
+    opacity: 0; /* Initially hidden */
+    transition: left 0.4s ease-in, opacity 0.4s ease-in;
+    animation: alertAnim 0.8s ease-in;
+    @keyframes alertAnim {
+      0% {
+          left: -100%; /* Start from the left of the viewport */
+      }
+      100% {
+          left: 50%; /* Move to the center */
+      }
+  }
+}
+
+.alert-content.show {
+    left: 50%; /* Move to the center when the 'show' class is applied */
+    opacity: 1; /* Make it visible */
+}
+
+
+.app-bg {
+    background-color: $proj-color-dark;
+    height: 100vh;
+    @include breakpoints(medium) {
+      height: auto;
+      background-color: #425D86;
+    }
+}
+
+.bg-color-2 {
+    background-color: $proj-color-dark-light;
+    @include breakpoints(medium) {
+      height: auto;
+      background-color: #24334980;
+    }
+}
+.f-colors {
+    color: $proj-color-light;
+    @include breakpoints(medium) {
+      color: #fff;
+    }
+}
+.f-colors-dark {
+    color: $proj-color-dark;
+}
+.bg-color-dark {
+    background-color: $proj-color-dark;
+    @include breakpoints(medium) {
+      background-color: $proj-color-dark-light;
+    }
+}
+.active {
+    color: #fff;
+}
+.tod-weather {
+    background: linear-gradient(rgba(0, 0, 0, 0.554), rgba(23, 21, 21, 0.607)), url('/images/backgrounds/clear-sky.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.suns-bg {
+  background-color: $proj-color-dark-light;
+  @include breakpoints(medium) {
+    height: auto;
+    background-color: #24334980;
+  }
+}
+
+.input-search-w {
+    width: 62.7%;
+    background-color: sk;
+}
+
+.space-p {
+    @include flexcenter2;
+}
+
+  .selected-item {
+    background-color: $proj-color-light;
+    color: #000;
+    transition: 0.3s ease-in-out;
+  }
+
+  .city-bg {
+    background: linear-gradient(#2B50A3, #26459D);
+  }
+
+// fonts 
+
+
+  .font-1 {
+    font-size: $fz-xlg;
+    font-weight: 600;
+    @include breakpoints(large) {
+      font-size: $fz-xl;
+    }
+    @include breakpoints(small-mobile) {
+      font-size: $fz-sm;
+    }
+  }
+  .font-2 {
+    font-size: $fz-lg;
+    font-weight: 600;
+    @include breakpoints(mobile) {
+      font-size: $fz-md;
+      font-weight: 500;
+    }
+  }
+  .font-3 {
+    font-weight: 600;
+  }
+
+  .i-f-size {
+    font-size: $fz-md;
+  }
+  
+  // cities animation (humidity)
+  .city-left-part {
+    overflow-x: hidden;
+  }
+
+  .city-left-part .anim {
+    overflow: hidden;
+    transform: translateX(-80%);
+    animation: animation 9s linear infinite;
+  }
+
+  @keyframes animation {
+    0% {
+    transform: translateX(-100%);
+    opacity: 1;
+      
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+    transform: translateX(100%);
+    opacity: 0.3;
+    }
+  }
+  
+
+  // setting theme mode 
+
+
+.switchThem {
+  display: none;
+}
+
+
+
+// media query 
+
+.app {
+  padding: 20px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  @include breakpoints(xlarge) {
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+  }
+  @include breakpoints(small-mobile) {
+    padding: 10px;
+  }
+}
+.left-side {
+  @include breakpoints(xlarge) {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    border-radius: 0;
+    height: 100vh;
+    background-color: $proj-color-dark;
+    transition: 0.4s;
+    border-radius: 0;
+    img {
+      width: 50px;
+      margin: 0 auto;
+      padding-top: 20px;
+    }
+    z-index: 600;
+  }
+  @include breakpoints(medium) {
+    width: 50%;
+    border-radius: 0;
+  }
+}
+.left-side.show {
+  left: 0;
+}
+.seerch-content {
+  @include breakpoints(xlarge) {
+    width: 100%;
+  }
+}
+#search-btn {
+  width: 20%;
+}
+.fa-bars {
+  display: none;
+  margin-right: 30px;
+  @include breakpoints(xlarge) {
+    display: block;
+  }
+  @include breakpoints(medium) {
+    display: none;
+  }
+}
+.x-close {
+  display: none;
+  @include breakpoints(xlarge) {
+    display: block;
+  }
+}
+.left-part-nav {
+  display: none;
+  @include breakpoints(medium) {
+    display: block;
+    .icon-m {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  @include breakpoints(small) {
+    display: block;
+    i {
+      font-size: 20px;
+    }
+  }
+}
+.right-side.show {
+  left: 0;
+}
+.right-side {
+  grid-column: span 3;
+  border-radius: 12px;
+  @include breakpoints(xlarge) {
+    grid-column: span 4;
+  }
+  @include breakpoints(medium) {
+    overflow-y: auto;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: $proj-color-dark;
+    border-radius: 0px;
+    transition: 0.4s;
+    // border-radius: 0;
+    z-index: 700;
+    padding: 10px;
+    height: 100vh;
+  }
+  .cities-content {
+    height: 100%;
+    grid-template-rows: repeat(7, minmax(0, 1fr));
+    @include breakpoints(large) {
+      height: auto;
+    }
+    @include breakpoints(medium) {
+      padding-top: 60px;
+      overflow-y: auto;
+      padding-bottom: 15px;
+      height: auto;
+    }
+  }
+}
+.close-cities {
+  display: none;
+  @include breakpoints(medium) {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $proj-color-dark;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 800;
+    padding: 20px;
+  }
+  p {
+    font-size: 20px;
+  }
+  i {
+    font-size: 20px;
+    float: right;
+  }
+}
+.cities.show {
+  display: none;
+}
+.settings {
+  display: none;
+  @include breakpoints(medium) {
+    padding: 5px;
+    .theme-st {
+      background-color: $proj-color-dark-light;
+      padding: 12px;
+      border-radius: 10px;
+    }
+  }
+}
+.settings.show {
+    display: block;
+}
+.weather-heart {
+  gap: 20px;
+  grid-column: span 8;
+  padding-right: 20px;
+  @include breakpoints(xlarge) {
+    grid-column: span 7;
+  }
+  @include breakpoints(medium) {
+    grid-column: span 11;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+  @include breakpoints(small-mobile) {
+    gap: 10px;
+  }
+  .for-row-p1 {
+    @include breakpoints(small-mobile) {
+      padding: 10px 0;
+    }
+  }
+  .f-r-p-inside {
+    padding: 28px;
+    @include breakpoints(small-mobile) {
+      padding: 10px 15px;
+      img {
+        width: 20px;
+      }
+      p {
+        font-size: $fw-sm;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.tod-forecast {
+  padding: 28px;
+  .t-d-cols {
+    border-right: 1px solid #374151;
+    &:last-child {
+      border: none;
+    }
+    @include breakpoints(medium) {
+      border-right: 1px solid #425D86;
+    }
+    @include breakpoints(mobile) {
+      img {
+        width: 20px;
+        padding: 8px 0;
+      }
+    }
+    @include breakpoints(small-mobile) {
+      p {
+        font-size: $fz-sm;
+      }
+      .time-h {
+        font-size: $fz-xs;
+      }
+      border: none;
+    }
+    
+  }
+  @include breakpoints(large) {
+    padding: 15px;
+  }
+  @include breakpoints(small-mobile) {
+    padding: 5px;
+  }
+}
+.p-redo {
+  padding: 28px;
+  @include breakpoints(large) {
+    padding: 15px;
+  }
+  @include breakpoints(small-mobile) {
+    padding: 10px;
+    i {
+      font-size: 14px;
+    }
+  }
+}
+.f-item {
+  display: flex;
+  @include breakpoints(large) {
+    display: block;
+  }
+  i {
+    margin-bottom: 10px;
+  }
+  .pik-12 {
+    @include breakpoints(large) {
+      padding: 0;
+    }
+    p {
+      padding-bottom: 6px;
+    }
+  }
+  .air-co {
+    @include breakpoints(small-mobile) {
+      span {
+        &:last-child {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+.search-input {
+  display: flex;
+  justify-content: space-between;
+  @include breakpoints(medium) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #425D86;
+    padding: 20px;
+    z-index: 500;
+  }
+  @include breakpoints(small) {
+    img {
+      width: 110px;
+    }
+  }
+}
+.search-content.show {
+  left: 0;
+}
+.search-content {
+  width: 50%;
+  @include breakpoints(medium) {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: $proj-color-dark;
+    transition: 0.4s ease;
+  }
+  .close-icon {
+    text-align: right;
+    font-size: 20px;
+    padding: 10px 20px ;
+    display: none;
+    @include breakpoints(medium) {
+      display: block;
+    }
+  }
+  .input {
+    display: flex;
+    @include breakpoints(medium) {
+      width: 80%;
+      position: absolute;
+      top: 16%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    .search {
+      width: 100%;
+    }
+  }
+}
+
+.le-part {
+  @include breakpoints(medium) {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.weather-temperator {
+  @include breakpoints(medium) {
+    padding-top: 61px;
+  }
+}
+.tod-weather {
+  border-radius: 12px;
+  @include breakpoints(medium) {
+    text-align: center;
+    background: transparent;
+  }
+}
+.w-block {
+  display: flex;
+  justify-content: space-between;
+  @include breakpoints(medium) {
+    display: block;
+    background: transparent;
+    
+    #city-name {
+      font-size: 40px;
+      text-align: center;
+      @include breakpoints(small) {
+        font-size: 28px;
+      }
+    }
+    .now-temp {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+      .now-temperator {
+      font-size: 90px;
+      }
+    }
+    .w-sit {
+      font-size: 80px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+.f-row {
+  gap: 20px;
+  @include breakpoints(small-mobile) {
+    gap: 10px;
+  }
+}
+.ar-sz {
+  @include breakpoints(small-mobile) {
+    font-size: 13px;
+  }
+}
+.pik-12 {
+  @include breakpoints(small-mobile) {
+    font-size: 13px;
+  }
+}

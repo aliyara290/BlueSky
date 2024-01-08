@@ -1,0 +1,75 @@
+$proj-color-dark: #0B131F;
+$proj-color-dark-light: #1c2634;
+$proj-color-light: #B8C1CE;
+$nav-cl-dark: #18212C;
+$nav-cl-dark-light: #313D50;
+$dark-light: #343a40;
+$blue-marin: #071d2b;
+$beige: #E2E1CC;
+$blue: #0046be;
+$dark-blue: #001e73;
+$saffron: #febd69;
+$saffron-navy: #f0a036;
+$indigo: #6610f2;
+$red: #d93511;
+$orange: #fd7e14;
+$dark-orange: #ed6e18;
+$yellow: #FFBF00;
+$green: #66B573;
+$teal: #20c997;
+$cyan: #17a2b8;
+$light: #fff;
+$gray-light: #efefef;
+$gray-dark: #343a40;
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #d93511;
+$info: #17a2b8;
+$warning: #FFBF00;
+$danger: #d93511;
+$light: #fff;
+$light-navy: #f8f9fa;
+$dark: #000;
+$fz-xxs: 12px;
+$fz-xs: 13px;
+$fz-sm: 14px;
+$fz-md: 16px;
+$fz-lg: 18px;
+$fz-xl: 20px;
+$fz-xlg: 24px;
+$fz-xll: 30px;
+$fz-heading: 32px;
+$fz-xxl: 45px;
+$fw-sm: 400;
+$fw-rg: 500;
+$fw-md: 600;
+$fw-bd: 700;
+$fw-xbd: 700;
+
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  box-shadow: none;
+
+}
+::-webkit-scrollbar-thumb {
+  background: $proj-color-dark-light; 
+  border-radius: 10px;
+
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $proj-color-dark-light; 
+}
+::-webkit-scrollbar-track-piece {
+  border: none;
+  }
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}

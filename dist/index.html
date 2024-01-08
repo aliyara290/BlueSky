@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f01941449c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/dist/css/main.css">
+    <link rel="icon" href="/images/icons/tab-icon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bluesky App</title>
+</head>
+<body>
+    <div class="blur"></div>
+    <div class="app app-bg grid gap-5">
+        <nav class="left-side grid bg-color-2 p-5 rounded-xl">
+            <nav class="list h-full">
+                <ul class="text-center flex flex-col justify-between h-full">
+                    <div class="main-list">
+                        <div class="x-close text-right">
+                            <i class="fa-solid fa-arrow-left text-2xl f-colors"></i>
+                        </div>
+
+                        <li class="mb-8 f-colors cursor-pointer hover:text-white active" id="cities-nav">
+                            <i class="fa-solid fa-list-ul text-2xl"></i>
+                            <p>Cities</p>
+                        </li>
+                    </div>
+                    <li class="mb-8 f-colors cursor-pointer hover:text-white items-center" id="settings-nav">
+                        <i class="fa-solid fa-sliders text-2xl"></i>
+                        <p>Settings</p>
+                    </li>
+                </ul>
+            </nav>
+        </nav>
+        
+        <aside class="right-side">
+            <div class="right-side-content h-full">
+                <!-- cities -->
+                <div class="cities h-full">
+                    <div class="close-cities">
+                        <p class="text-white">World cities</p>
+                        <i class="fa-solid fa-arrow-left text-white" id="cities-close"></i>
+                    </div>
+                    <div class="cities-content grid gap-4 text-white">
+                        <div class="city-card">
+                            <div class="city-pp rounded-xl p-5 flex justify-between items-center city-weather city-bg">
+                                <div class="city-left-part">
+                                    <div class="mb-2">
+                                        <p class="city-name text-xl font-bold">_ _ _ _</p>
+                                    </div>
+                                    <div>
+                                        <p class="city-humidity anim">_ _</p>
+                                    </div>
+                                </div>
+                                <div class="city-right-part">
+                                    <div class="mb-2">
+                                        <p class="city-temp text-xl text-right font-bold">_ _</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="city-wt-description">_ _</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-pp rounded-xl p-5 flex justify-between items-center city-weather city-bg">
+                                <div class="city-left-part">
+                                    <div class="mb-2">
+                                        <p class="city-name text-xl font-bold ">_ _ _ _</p>
+                                    </div>
+                                    <div>
+                                        <p class="city-humidity anim">_ _</p>
+                                    </div>
+                                </div>
+                                <div class="city-right-part">
+                                    <div class="mb-2">
+                                        <p class="city-temp text-xl text-right font-bold">_ _</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="city-wt-description">_ _</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-pp rounded-xl p-5 flex justify-between items-center city-weather city-bg">
+                                <div class="city-left-part">
+                                    <div class="mb-2">
+                                        <p class="city-name text-xl font-bold">_ _ _ _</p>
+                                    </div>
+                                    <div>
+                                        <p class="city-humidity anim">_ _</p>
+                                    </div>
+                                </div>
+                                <div class="city-right-part">
+                                    <div class="mb-2">
+                                        <p class="city-temp text-xl text-right font-bold">_ _</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="city-wt-description">_ _</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-pp rounded-xl p-5 flex justify-between items-center city-weather city-bg">
+                                <div class="city-left-part">
+                                    <div class="mb-2">
+                                        <p class="city-name text-xl font-bold">_ _ _ _</p>
+                                    </div>
+                                    <div>
+                                        <p class="city-humidity anim">_ _</p>
+                                    </div>
+                                </div>
+                                <div class="city-right-part">
+                                    <div class="mb-2">
+                                        <p class="city-temp text-xl text-right font-bold">_ _</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="city-wt-description">_ _</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-pp rounded-xl p-5 flex justify-between items-center city-weather city-bg">
+                                <div class="city-left-part">
+                                    <div class="mb-2">
+                                        <p class="city-name text-xl font-bold">_ _ _ _</p>
+                                    </div>
+                                    <div>
+                                        <p class="city-humidity anim">_ _</p>
+                                    </div>
+                                </div>
+                                <div class="city-right-part">
+                                    <div class="mb-2">
+                                        <p class="city-temp text-xl text-right font-bold">_ _</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="city-wt-description">_ _</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-pp rounded-xl p-5 flex justify-between items-center city-weather city-bg">
+                                <div class="city-left-part">
+                                    <div class="mb-2">
+                                        <p class="city-name text-xl font-bold">_ _ _ _</p>
+                                    </div>
+                                    <div>
+                                        <p class="city-humidity anim">_ _</p>
+                                    </div>
+                                </div>
+                                <div class="city-right-part">
+                                    <div class="mb-2">
+                                        <p class="city-temp text-xl text-right font-bold">_ _</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="city-wt-description">_ _</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-pp rounded-xl p-5 flex justify-between items-center city-weather city-bg">
+                                <div class="city-left-part">
+                                    <div class="mb-2">
+                                        <p class="city-name text-xl font-bold">_ _ _ _</p>
+                                    </div>
+                                    <div>
+                                        <p class="city-humidity anim">_ _</p>
+                                    </div>
+                                </div>
+                                <div class="city-right-part">
+                                    <div class="mb-2">
+                                        <p class="city-temp text-xl text-right font-bold">_ _</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="city-wt-description">_ _</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- settings --> 
+                <div class="settings f-colors">
+                    <div class="close-cities">
+                        <p class="text-white">Settings</p>
+                        <i class="fa-solid fa-arrow-left text-white" id="settings-close"></i>
+                    </div>
+                    <div class="settings-content">
+                        <div class="head">
+                            <h3 class="text-2xl f-colors mb-10 font-bold">Settings</h3>
+                        </div>
+                        <div class="theme-st flex justify-between items-center mb-9">
+                            <div class="theme-head">
+                                <h4 class=" font-bold">Theme</h4>
+                            </div>
+                            <div class="mode-icons">
+                                <i class="fa-solid fa-moon text-2xl cursor-pointer switchThem"></i>
+                                <i class="fa-solid fa-sun text-2xl cursor-pointer"></i>
+                            </div>
+                            <!-- <div class="toggle-switch">
+                                <input class="toggle-input" id="toggle" type="checkbox">
+                                <label class="toggle-label" for="toggle"></label>
+                              </div> -->
+                        </div>
+
+                        <div class="temperature-type-st mb-9">
+                            <div class="temp-head">
+                                <h4 class="mb-4 font-bold">Temperature</h4>
+                            </div>
+                            <div class="temp-types flex items-center">
+                                <p class="bg-color-dark py-2 px-5 mr-3 rounded-2xl cursor-pointer" id="fahrenheit">Fahrenheit</p>
+                                <p class="bg-color-dark py-2 px-5 rounded-2xl selected-item cursor-pointer" id="celsius">Celsius</p>
+                            </div>
+                        </div>
+
+                        <div class="wind-speed-st mb-9">
+                            <div class="wind-head">
+                                <h4 class="mb-4 font-bold">Wind speed</h4>
+                            </div>
+                            <div class="wind-types flex items-center">
+                                <p class="bg-color-dark py-2 px-5 mr-3 rounded-2xl cursor-pointer" id="meter-s">m/s</p>
+                                <p class="bg-color-dark py-2 px-5 mr-3 rounded-2xl selected-item cursor-pointer" id="kilo-h">km/h</p>
+                                <p class="bg-color-dark py-2 px-5 rounded-2xl cursor-pointer" id="mph">mph</p>
+                            </div>
+                        </div>
+
+                        <div class="air-pressure-st mb-9">
+                            <div class="air-pr-head">
+                                <h4 class="font-bold mb-4">pressure</h4>
+                            </div>
+                            <div class="air-ps-types flex items-center">
+                                <p class="mmhg bg-color-dark py-2 px-5 mr-3 rounded-2xl cursor-pointer" id="mmhg">mmHg</p>
+                                <p class="inhg bg-color-dark py-2 px-5 mr-3 rounded-2xl cursor-pointer" id="inhg">inHg</p>
+                                <p class="hpa bg-color-dark py-2 px-5 rounded-2xl selected-item cursor-pointer" id="hpa">hPa</p>
+                            </div>
+                        </div>
+
+                        <div class="visibility-st">
+                            <div class="visi-head">
+                                <h4 class="font-bold mb-4">Visibility</h4>
+                            </div>
+                            <div class="visi-types flex items-center">
+                                <p class="vs-km bg-color-dark py-2 px-5 mr-3 rounded-2xl selected-item cursor-pointer" id="km">km</p>
+                                <p class="vs-mi bg-color-dark py-2 px-5  rounded-2xl cursor-pointer" id="meter">mi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="weather-heart grid overflow-y-auto">
+            <!-- search input -->
+            <div class="search-input appearance-none w-full items-center">
+
+                <div class="bar flex items-center">
+                    <i class="fa-solid fa-bars text-3xl f-colors"></i>
+                    <div class="logo">
+                        <img src="/images/logo/bluesky-logo.png" alt="logo" width="130px">
+                    </div>
+                </div>
+
+                <div class="search-content">
+                    <div class="close-cities">
+                        <p class="text-white">Search</p>
+                        <i class="fa-solid fa-arrow-left text-white" id="search-close"></i>
+                    </div>
+                    <div class="input">
+                        <input type="search" id="search-input" class="search bg-color-2 rounded-s-xl h-11 pl-5 text-white outline-none border-none" placeholder="e.g., London, Casablanca">
+                        <!-- search btn -->
+                        <button id="search-btn" type="button" class="bg-white h-11 hover:bg-slate-300 w-1/12 rounded-r-xl f-colors-dark cursor-pointer"><i class="fa-solid fa-magnifying-glass text-xl"></i></button>
+                    </div>
+                </div>
+
+                <div class="left-part-nav text-right">
+                    <div class="icons-content">
+                        <div class="i-cnt flex items-center">
+                            <div class="icon-m mr-6" id="search-mo">
+                                <i class="fa-solid fa-search f-colors"></i>
+                            </div>
+                            <div class="icon-m mr-6" id="cities-mo">
+                                <i class="fa-solid fa-list f-colors"></i>
+                            </div>
+                            <div class="icon-m" id="settings-mo">
+                                <i class="fa-solid fa-gear f-colors"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- weather temperator -->
+            <section class="weather-temperator">
+                <div class="tod-weather">
+                    <div class="w-block p-7 py-10 items-center rounded-xl w-full">
+                        <div class="le-part">
+                            <div class="pb-7">
+                                <p class="text-4xl text-white pb-4 font-medium" id="city-name">_</p>
+                            </div>
+                            <div class="now-temp">
+                                <div class="now-temperator text-6xl font-medium text-white flex items-start">
+                                    <p class="temp">10</p>
+                                    <span class="text-3xl pl-1">°</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="le-part">
+                            <div class="w-sit flex">
+                                <P class="weather-desc text-2xl text-white pl-2">_</P>
+                            </div>
+                            <!-- <div class="w-sit flex">
+                                <p class="text-xl text-white inline">Air quality : </p>
+                                <P class="weather-desc text-xl text-white pl-2" id="air-quality"> _ _</P>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- today forecast -->
+            <section class="tod-forecast bg-color-2 rounded-xl">
+                <div class="t-d-hourly items-center grid grid-cols-6 relative">
+                    <div class="t-d-cols flex justify-around h-full">
+                        <div class="t-d-cols-2 grid grid-rows-3 h-full">
+                            <div class="t-d-cols-time space-p">
+                                <span class="time-h f-colors items-center">_ _</span>
+                            </div>
+                            <div class="t-d-cols-icon">
+                                <img src="/images/weather-situation/louding.png" alt="cloudy" width="40px" class="weather-icon m-auto py-3">
+                            </div>
+                            <div class="f-colors font-2 space-p">
+                                <div class="temp-lo flex m-auto">
+                                    <p class="today-temps">_ _</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-d-cols flex justify-around border-r-2 border-gray-700 h-full">
+                        <div class="t-d-cols-2 grid grid-rows-3 h-full">
+                            <div class="t-d-cols-time space-p">
+                                <span class="time-h f-colors items-center">_ _</span>
+                            </div>
+                            <div class="t-d-cols-icon">
+                                <img src="/images/weather-situation/louding.png" alt="cloudy" width="40px" class="weather-icon m-auto py-3">
+                            </div>
+                            <div class="f-colors font-2 space-p">
+                                <div class="temp-lo flex m-auto">
+                                    <p class="today-temps">_ _</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-d-cols flex justify-around border-r-2 border-gray-700 h-full">
+                        <div class="t-d-cols-2 grid grid-rows-3 h-full">
+                            <div class="t-d-cols-time space-p">
+                                <span class="time-h f-colors items-center">_ _</span>
+                            </div>
+                            <div class="t-d-cols-icon">
+                                <img src="/images/weather-situation/louding.png" alt="cloudy" width="40px" class="weather-icon m-auto py-3">
+                            </div>
+                            <div class="f-colors font-2 space-p">
+                                <div class="temp-lo flex m-auto">
+                                    <p class="today-temps">_ _</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-d-cols flex justify-around border-r-2 border-gray-700 h-full">
+                        <div class="t-d-cols-2 grid grid-rows-3 h-full">
+                            <div class="t-d-cols-time space-p">
+                                <span class="time-h f-colors items-center">_ _</span>
+                            </div>
+                            <div class="t-d-cols-icon">
+                                <img src="/images/weather-situation/louding.png" alt="cloudy" width="40px" class="weather-icon m-auto py-3">
+                            </div>
+                            <div class="f-colors font-2 space-p">
+                                <div class="temp-lo flex m-auto">
+                                    <p class="today-temps">_ _</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-d-cols flex justify-around border-r-2 border-gray-700 h-full">
+                        <div class="t-d-cols-2 grid grid-rows-3 h-full">
+                            <div class="t-d-cols-time space-p">
+                                <span class="time-h f-colors items-center">_ _</span>
+                            </div>
+                            <div class="t-d-cols-icon">
+                                <img src="/images/weather-situation/louding.png" alt="cloudy" width="40px" class="weather-icon m-auto py-3">
+                            </div>
+                            <div class="f-colors font-2 space-p">
+                                <div class="temp-lo flex m-auto">
+                                    <p class="today-temps">_ _</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="t-d-cols flex justify-around h-full">
+                        <div class="t-d-cols-2 grid grid-rows-3 h-full">
+                            <div class="t-d-cols-time space-p">
+                                <span class="time-h f-colors items-center">_ _</span>
+                            </div>
+                            <div class="t-d-cols-icon">
+                                <img src="/images/weather-situation/louding.png" alt="cloudy" width="40px" class="weather-icon m-auto py-3">
+                            </div>
+                            <div class="f-colors font-2 space-p">
+                                <div class="temp-lo flex m-auto">
+                                    <p class="today-temps">_ _</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- 7 days forecast -->
+            <section class="days-temps h-full bg-color-2 rounded-xl">
+                <div class="for-row-p1">
+                    <div class="f-r-p-inside flex justify-center items-center px-7 py-4">
+                        <div class="second-pro f-colors grid grid-cols-3 w-full items-center">
+                            <div class="get-day">
+                                <p>Tmw</p>
+                            </div>
+                            <div class="wet-set">
+                                <div class="img-clo">
+                                    <img src="/images/weather-situation/clouds.png" alt="cloudy" width="30px" class="m-auto">
+                                </div>
+                            </div>
+                            <div class="temp-d-n text-right">
+                                <p><span class="">16°</span> / <span class="night-temp">14°</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-r-p-inside flex justify-center items-center px-7 py-4">
+                        <div class="second-pro f-colors grid grid-cols-3 w-full items-center">
+                            <div class="get-day">
+                                <p>Tue</p>
+                            </div>
+                            <div class="wet-set">
+                                <div class="img-clo">
+                                    <img src="/images/weather-situation/rainy.png" alt="cloudy" width="30px" class="m-auto">
+                                </div>
+                            </div>
+                            <div class="temp-d-n text-right">
+                                <p><span class="">21°</span> / <span class="night-temp">18°</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-r-p-inside flex justify-center items-center px-7 py-4">
+                        <div class="second-pro f-colors grid grid-cols-3 w-full items-center">
+                            <div class="get-day">
+                                <p>Wed</p>
+                            </div>
+                            <div class="wet-set">
+                                <div class="img-clo">
+                                    <img src="/images/weather-situation/sunny.png" alt="cloudy" width="30px" class="m-auto">
+                                </div>
+                            </div>
+                            <div class="temp-d-n text-right">
+                                <p><span class="">20°</span> / <span class="night-temp">18°</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-r-p-inside flex justify-center items-center px-7 py-4">
+                        <div class="second-pro f-colors grid grid-cols-3 w-full items-center">
+                            <div class="get-day">
+                                <p>Thur</p>
+                            </div>
+                            <div class="wet-set">
+                                <div class="img-clo">
+                                    <img src="/images/weather-situation/clouds.png" alt="cloudy" width="30px" class="m-auto">
+                                </div>
+                            </div>
+                            <div class="temp-d-n text-right">
+                                <p><span class="">21°</span> / <span class="night-temp">18°</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-r-p-inside flex justify-center items-center px-7 py-4">
+                        <div class="second-pro f-colors grid grid-cols-3 w-full items-center">
+                            <div class="get-day">
+                                <p>Fri</p>
+                            </div>
+                            <div class="wet-set">
+                                <div class="img-clo">
+                                    <img src="/images/weather-situation/drizzle.png" alt="cloudy" width="30px" class="m-auto">
+                                </div>
+                            </div>
+                            <div class="temp-d-n text-right">
+                                <p><span class="">19°</span> / <span class="night-temp">16°</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-r-p-inside flex justify-center items-center px-7 py-4">
+                        <div class="second-pro f-colors grid grid-cols-3 w-full items-center">
+                            <div class="get-day">
+                                <p>Sat</p>
+                            </div>
+                            <div class="wet-set">
+                                <div class="img-clo">
+                                    <img src="/images/weather-situation/partly-cloudy.png" alt="cloudy" width="30px" class="m-auto">
+                                </div>
+                            </div>
+                            <div class="temp-d-n text-right">
+                                <p><span class="">21°</span> / <span class="night-temp">18°</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-r-p-inside flex justify-center items-center px-7 py-4">
+                        <div class="second-pro f-colors grid grid-cols-3 w-full items-center">
+                            <div class="get-day">
+                                <p>Sund</p>
+                            </div>
+                            <div class="wet-set">
+                                <div class="img-clo">
+                                    <img src="/images/weather-situation/clouds.png" alt="cloudy" width="30px" class="m-auto">
+                                </div>
+                            </div>
+                            <div class="temp-d-n text-right">
+                                <p><span class="">20°</span> / <span class="night-temp">18°</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </section>
+            <!-- Air condition -->
+            <section class="a-cond ">
+                <div class="ai-cond ">
+                    <div class="f-row grid grid-cols-3">
+                        <div class="p-redo bg-color-2 rounded-xl">
+                            <div class="f-item">
+                                <i class="fa-solid fa-temperature-quarter i-f-size f-colors"></i>
+                                <div class="pik-12 pl-5">
+                                    <p class="f-colors text-md pb-3">Feels like</p>
+                                    <div class="f-colors flex font-1">
+                                        <span class="ar-sz" id="real-feel">_ _</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-redo grid cols-span-1 bg-color-2 rounded-xl">
+                            <div class="f-item">
+                                <i class="fa-solid fa-wind i-f-size f-colors"></i>
+                                <div class="pik-12 pl-5">
+                                    <p class="f-colors text-md pb-3">Wind</p>
+                                    <div class="air-co f-colors flex font-1">
+                                        <span class="ar-sz" id="wind">_ _</span>
+                                        <span class="wind-path text-base flex items-end pb-1 pl-1"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-redo bg-color-2 rounded-xl">
+                            <div class="f-item">
+                                <i class="fa-solid fa-umbrella i-f-size f-colors"></i>
+                                <div class="pik-12 pl-5">
+                                    <p class="f-colors text-md pb-3">Pressure</p>
+                                    <div class="air-co f-colors flex font-1">
+                                        <span class="ar-sz" id="pressure">_ _</span>
+                                        <span class="presure-path text-base flex items-end pb-1 pl-1"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-redo grid cols-span-1 bg-color-2 rounded-xl">
+                            <div class="f-item">
+                                <i class="fa-solid fa-sun i-f-size f-colors"></i>
+                                <div class="pik-12 pl-5">
+                                    <p class="f-colors text-md pb-3">UV Index</p>
+                                    <div class="air-co f-colors flex font-1">
+                                        <p class="ar-sz" id="index">_ _</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-redo grid cols-span-1 bg-color-2 rounded-xl">
+                            <div class="f-item">
+                                <i class="fa-solid fa-droplet i-f-size f-colors"></i>
+                                <div class="pik-12 pl-5">
+                                    <p class="f-colors text-md pb-3">Humidity</p>
+                                    <div class="air-co f-colors flex font-1">
+                                        <span class="ar-sz" id="humidity">_ _</span>
+                                        <span class="humidity-path text-base flex items-end pb-1 pl-1"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-redo grid cols-span-1 bg-color-2 rounded-xl">
+                            <div class="f-item">
+                                <i class="fa-solid fa-eye i-f-size f-colors"></i>
+                                <div class="pik-12 pl-5">
+                                    <p class="f-colors text-md pb-3">Visibility</p>
+                                    <div class="air-co f-colors flex font-1">
+                                        <span class="ar-sz" id="Visibility">_ _</span>
+                                        <span class="visibility-path text-base flex items-end pb-1 pl-1"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sunset-rise">
+                <div class="ai-cond grid grid-cols-1 gap-5">
+                    <div class="f-row">
+                        <div class="sun-dt suns-bg rounded-xl p-redo grid grid-cols-2">
+
+                            <div class="m-auto">
+                                <div class="f-item-two flex">
+                                    <div class="sun-img flex justify-center items-center">
+                                        <div class="s-img">
+                                            <img src="/images/icons/sunrise.png" alt="icon" class="mr-6" width="20px">
+                                        </div>
+                                    </div>
+                                    <div class="pik-12 text-start">
+                                        <p class="f-colors text-md pb-3">Sunrise</p>
+                                        <div class="f-colors font-1">
+                                            <p class="suns-tm " id="sunrise">_ _ _</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="m-auto">
+                                <div class="f-item-two flex">
+                                    <div class="sun-img flex justify-center items-center">
+                                        <div class="s-img">
+                                            <img src="/images/icons/sunset.png" alt="icon" class="mr-6" width="20px">
+                                        </div>
+                                    </div>
+                                    <div class="pik-12 text-start">
+                                        <p class="f-colors text-md pb-3">Sunset</p>
+                                        <div class="f-colors font-1">
+                                            <p class="suns-tm" id="sunset">_ _ _</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    
+      <script src="/script/main.js" type="module"></script>
+      <script src="/script/sep/navbar.js"></script>
+      <script src="/script/sep/mob-nav.js"></script>
+      <script src="/script/sep/light-mode.js"></script>
+      <script src="/script/sep/wind.js" type="module"></script>
+      <script src="/script/sep/pressure.js" type="module"></script>
+      <script src="/script/sep/visibility.js" type="module"></script>
+      <script src="/script/sep/cities.js"></script>
+</body>
+</html>
