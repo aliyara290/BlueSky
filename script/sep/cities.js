@@ -1,5 +1,5 @@
 const apiKey = 'fa46ad611512230d302fada95b54016a';
-const citiesName = ['Dubai', 'London', 'Tangier', 'Moscow', 'Istanbul', 'Berlin', 'Toyama'];
+const citiesName = ['Dubai', 'London', 'Tangier', 'New york', 'Istanbul', 'Berlin', 'Toyama', 'Tokyo', 'Madrid', 'Manchester', 'Jeddah', 'Chicago', 'Paris', 'Moscow'];
 
 citiesName.forEach((cityName, index) => {
     const newXml = new XMLHttpRequest();
