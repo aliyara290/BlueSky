@@ -48,6 +48,10 @@ html {
           user-select: none;
 }
 
+i {
+  cursor: pointer;
+}
+
 .blur {
   position: fixed;
   top: 0;
