@@ -4,7 +4,7 @@ const get5DaysTemp = new XMLHttpRequest();
 let alertAppended = false; // Flag to track whether the alert has been appended
 
 const getDefaultCityWeather = () => {
-    const defaultCity = 'london';
+    const defaultCity = 'Laayoune';
     myRequest.open('GET', `https://api.openweathermap.org/data/2.5/weather?q=${defaultCity}&appid=${apiKey}&lang=en`);
     myRequest.send();
 };

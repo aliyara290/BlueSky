@@ -15,7 +15,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -374,10 +374,6 @@ i {
     height: 100vh;
   }
 }
-.right-side .cities-content {
-  height: 100%;
-  grid-template-rows: repeat(7, minmax(0, 1fr));
-}
 @media (max-width: 1080px) {
   .right-side .cities-content {
     height: auto;
@@ -386,7 +382,6 @@ i {
 @media (min-width: 100px) and (max-width: 837px) {
   .right-side .cities-content {
     padding-top: 60px;
-    overflow-y: auto;
     padding-bottom: 15px;
     height: auto;
   }

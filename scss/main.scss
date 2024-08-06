@@ -296,14 +296,11 @@ i {
     height: 100vh;
   }
   .cities-content {
-    height: 100%;
-    grid-template-rows: repeat(7, minmax(0, 1fr));
     @include breakpoints(large) {
       height: auto;
     }
     @include breakpoints(medium) {
       padding-top: 60px;
-      overflow-y: auto;
       padding-bottom: 15px;
       height: auto;
     }
