@@ -60,7 +60,9 @@ i {
     opacity: 1; /* Make it visible */
 }
 
-
+.main_color {
+  background-color: $proj-color-dark;
+}
 .app-bg {
     background-color: $proj-color-dark;
     height: 100vh;

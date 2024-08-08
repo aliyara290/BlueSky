@@ -99,6 +99,10 @@ i {
   opacity: 1; /* Make it visible */
 }
 
+.main_color {
+  background-color: #0B131F;
+}
+
 .app-bg {
   background-color: #0B131F;
   height: 100vh;
