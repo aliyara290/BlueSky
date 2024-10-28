@@ -28,7 +28,6 @@ myRequest.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
         const jsonData = JSON.parse(myRequest.responseText);
         const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${jsonData.coord.lat}&lon=${jsonData.coord.lon}&appid=${apiKey}`;
-        console.log(jsonData);
         // get 5 days temp and date
         get5DaysTemp.open('GET', apiUrl);
         get5DaysTemp.onreadystatechange = function () {
